@@ -9,7 +9,6 @@ permissions:
 jobs:
   setup-environment:
     runs-on: ubuntu-latest
-    if: ${{ (github.actor == 'renovate[bot]' || contains(github.event.pull_request.labels.*.name, 'renovatebot')) }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
